@@ -34,6 +34,6 @@ def hangman(word):
         print("\n".join(stages[0:wrong]))
         print("You lose! It was {}.".format(word))
 
-wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", "Farmer", "Hello", "World"]
+wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", "Farmer", "Hello", "World", "code", "Hangman", "Google", "Apple", "toys", "stages", "python"]
 word = random.choice(wordlst[:])
 hangman(word)
