@@ -33,5 +33,3 @@ if (user == "alpha"):
     pinnum5 = random.randint(0,9)
     pinnum6 = random.randint(0,9)
     print("Here is your generated alphanumeric password:", Cletter1,pinnum1,pinnum2,Cletter2,pinnum3,pinnum4,Cletter3,Cletter4,pinnum5,pinnum6)
-else:
-    print("ERROR")
