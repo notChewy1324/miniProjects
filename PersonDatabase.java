@@ -3,12 +3,12 @@ public class PersonDatabase
 	public static void main(String[] args) {
 	
 	//Values for Ecoli
-	int age = 15;
+	int age = 17;
 	String person = "Ecoli";
 	String passions = "Track & Field";
 	String school = ("High School");
 	String gradelevel = ("9");
-	String lover = "None";
+	String lover = "N/A";
 	
 	//Reader Values for Ecoli
 	String helpername = ("Name: ");
@@ -43,7 +43,7 @@ public class PersonDatabase
 	String passions2 = "Soccer";
 	String school2 = ("Middle School");
 	String gradelevel2 = ("8");
-	String lover2 = "None";
+	String lover2 = "N/A";
 	
 	//Reader Values for Jack
 	String helpername2 = ("Name: ");
