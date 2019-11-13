@@ -1,4 +1,6 @@
 import random
+wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", "Farmer", "Hello", "World", "code", "Hangman", "Google", "Apple", "toys", "stages", "python"]
+print("Possible words:",wordlst)
 def hangman(word):
     wrong = 0
     stages = ["",
@@ -28,12 +30,12 @@ def hangman(word):
         print("\n".join(stages[0:e]))
         if "__" not in board:
             print(" ".join(board))
+            print("You Win! It was {}.".format(word))
             win = True
             break
     if not win:
         print("\n".join(stages[0:wrong]))
         print("You lose! It was {}.".format(word))
 
-wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", "Farmer", "Hello", "World", "code", "Hangman", "Google", "Apple", "toys", "stages", "python"]
 word = random.choice(wordlst[:])
 hangman(word)
