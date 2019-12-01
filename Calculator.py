@@ -40,7 +40,7 @@ while(True):
                 print("The answer is:", divanswer)
         else:
                 print("Make sure that you enter EXACLTY what the word above said!")
-                user = input("Would you like to continue again? (y or n)")
+                user = input("Would you like to continue again? (y or n): ")
                 if (user == "y"):
                         continue
                 else:
