@@ -6,7 +6,7 @@ while(True):
         binary = random.randint(0,1)
         print(binary)
         continue
-    user2 = input("Type Again? ( y or n) :")
+    user2 = input("Type Again? ( y or n): ")
     if (user2 == "y"):
         continue
     else:
