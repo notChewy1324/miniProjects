@@ -13,7 +13,7 @@ pyautogui.press(str(pinnum2))
 pyautogui.press(str(pinnum3))
 pyautogui.press(str(pinnum4))
 
-time.sleep(2)
+time.sleep(1)
 pyautogui.press(str(pinnum1))
 pyautogui.press(str(pinnum2))
 pyautogui.press(str(pinnum3))
