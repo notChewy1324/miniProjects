@@ -7,7 +7,7 @@ pinnum2 = random.randint(0,9)
 pinnum3 = random.randint(0,9)
 pinnum4 = random.randint(0,9)
 
-time.sleep(5)
+time.sleep(2)
 pyautogui.press(str(pinnum1))
 pyautogui.press(str(pinnum2))
 pyautogui.press(str(pinnum3))
