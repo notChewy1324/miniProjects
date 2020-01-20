@@ -7,7 +7,7 @@ while(True):
     f.write(user + "\n")
     f.close()
     print("Saved!")
-    user1 = input("Would you like to write for the next day? (next or quit)")
+    user1 = input("Would you like to write for the next day? (type next or quit) ")
     if (user1 == "next"):
         daycount += 1
         continue
