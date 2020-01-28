@@ -4,6 +4,8 @@ while(True):
     user = input("Day " + str(daycount) + " Log: ")
     user = str("Day " + str(daycount) + " Log: " + user)
     f = open('Diary_Logs', "a+")
+    if daycount == 0:
+        f.write("New Day Session" + "\n")
     f.write(user + "\n")
     f.close()
     print("Saved!")
