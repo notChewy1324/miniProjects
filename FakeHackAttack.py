@@ -12,7 +12,7 @@ while(start <= end):
     pyautogui.FAILSAFE = False
 
     # website control
-    stop = random.randint(0,10)
+    stop = random.randint(0,60)
     time.sleep(stop)
     sites = random.choice(['duckduckgo.com','netflix.com','disneyplus.com','cnn.com','espn.com','facebook.com','snapchat.com',
                            'yahoo.com','amazon.com','bing.com','gmail.com','microsoft.com','apple.com','support.google.com',
@@ -24,7 +24,7 @@ while(start <= end):
     # mouse control
     x = random.randint(0,1920)
     y = random.randint(0,1080)
-    secs = random.randint(3,15)
+    secs = random.randint(3,10)
     pyautogui.moveTo(x, y, secs)
     pyautogui.click(x, y, 1, 1, button='left')
 
