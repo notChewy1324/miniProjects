@@ -41,7 +41,7 @@ while(True):
 
     #Pin Code
     if (user == "pin"):
-        pinuser = input("Would you like to generate a 4-digit or 6-digit pin code? (type 4 or 6): ")
+        pinuser = input("Would you like to generate a 4-digit or 6-digit pin code? (type 4 or 6):")
         pinuser = int(pinuser)
     if (pinuser == 4):
         pinnum1 = random.randint(0,9)
