@@ -34,23 +34,25 @@ while(True):
         alphaLetter6 = random.choice(alphaList[:])
         alphaLetter7 = random.choice(alphaList[:])
         alphaLetter7 = str(alphaLetter7.upper())
-        print("Here is your generated alphanumeric password:", alphaLetter1,pinnum1,pinnum2,alphaLetter2,pinnum3,pinnum4,alphaLetter3,alphaLetter4,
+        print("Here is your generated alphanumeric password: ", alphaLetter1,pinnum1,pinnum2,alphaLetter2,pinnum3,pinnum4,alphaLetter3,alphaLetter4,
               pinnum5,pinnum6,pinnum7,alphaLetter5,pinnum8,pinnum9,alphaLetter6,alphaLetter7)
         time.sleep(1)
         continue
 
     #Pin Code
     if (user == "pin"):
-        pinuser = input("Would you like to generate a 4-digit or 6-digit pin code? (type 4 or 6):")
+        pinuser = input("Would you like to generate a 4-digit or 6-digit pin code? (type 4 or 6): ")
         pinuser = int(pinuser)
+
     if (pinuser == 4):
         pinnum1 = random.randint(0,9)
         pinnum2 = random.randint(0,9)
         pinnum3 = random.randint(0,9)
         pinnum4 = random.randint(0,9)
-        print("Here is your generated 4-digit pin number:",pinnum1,pinnum2,pinnum3,pinnum4)
+        print("Here is your generated 4-digit pin number: ",pinnum1,pinnum2,pinnum3,pinnum4)
         time.sleep(1)
         continue
+    
     if (pinuser == 6):
         pinnum1 = random.randint(0,9)
         pinnum2 = random.randint(0,9)
@@ -58,6 +60,6 @@ while(True):
         pinnum4 = random.randint(0,9)
         pinnum5 = random.randint(0,9)
         pinnum6 = random.randint(0,9)
-        print("Here is your generated 6-digit pin number:",pinnum1,pinnum2,pinnum3,pinnum4,pinnum5,pinnum6)
+        print("Here is your generated 6-digit pin number: ",pinnum1,pinnum2,pinnum3,pinnum4,pinnum5,pinnum6)
         time.sleep(1)
         continue
