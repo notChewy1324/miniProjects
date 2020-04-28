@@ -30,6 +30,6 @@ while(start <= end):
 
     # screenshot control
     count = count + 1
-    pyautogui.screenshot('userData' + str(count) + '.png')
+    pyautogui.screenshot('userData-' + str(count) + '.png')
     
     continue
