@@ -4,10 +4,10 @@ import random
 import time
 
 start = 0
-end = 80
+end = 1
 count = 0
 
-while(start <= end):
+while(start < end):
 
     pyautogui.FAILSAFE = False
 
