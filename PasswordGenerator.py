@@ -33,8 +33,7 @@ while(True):
         alphaLetter6 = random.choice(alphaList[:])
         alphaLetter7 = random.choice(alphaList[:])
         alphaLetter7 = str(alphaLetter7.upper())
-        print("Here is your generated alphanumeric password: ", alphaLetter1,pinnum1,pinnum2,alphaLetter2,pinnum3,pinnum4,alphaLetter3,alphaLetter4,
-              pinnum5,pinnum6,pinnum7,alphaLetter5,pinnum8,pinnum9,alphaLetter6,alphaLetter7)
+        print("Here is your generated alphanumeric password: ",alphaLetter1,pinnum1,pinnum2,alphaLetter2,pinnum3,pinnum4,alphaLetter3,alphaLetter4,pinnum5,pinnum6,pinnum7,alphaLetter5,pinnum8,pinnum9,alphaLetter6,alphaLetter7)
         time.sleep(1)
         continue
 
