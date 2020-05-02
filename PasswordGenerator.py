@@ -9,6 +9,7 @@ while(True):
 
     #Stop Program
     if (user != "alpha" and user != "pin"):
+        print("Bye!")
         break
 
     #Alpha Password
