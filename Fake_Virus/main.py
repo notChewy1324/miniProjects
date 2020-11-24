@@ -16,5 +16,6 @@ for line in lines:
         break
 
 python_scripts = glob.glob('*.py') + glob.glob('*.pyw')
+print(python_scripts)
 
 # Virus End
