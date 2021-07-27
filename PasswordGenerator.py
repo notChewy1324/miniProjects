@@ -50,7 +50,6 @@ while(True):
         pinnum4 = random.randint(0,9)
         print("Here is your generated 4-digit pin number: ",pinnum1,pinnum2,pinnum3,pinnum4)
         time.sleep(1)
-        continue
     
     if (pinuser == 6):
         pinnum1 = random.randint(0,9)
@@ -61,4 +60,3 @@ while(True):
         pinnum6 = random.randint(0,9)
         print("Here is your generated 6-digit pin number: ",pinnum1,pinnum2,pinnum3,pinnum4,pinnum5,pinnum6)
         time.sleep(1)
-        continue
