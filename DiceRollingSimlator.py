@@ -14,7 +14,6 @@ while(True):
         userq = input("Would you like to roll the dice again? (y or n): ")
         if (userq == "y"):
             number = random.randint(1,6)
-            continue
         else:
             print("Bye")
             break
