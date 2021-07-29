@@ -14,7 +14,10 @@ while(True):
 
     #Alpha Password
     if (user == "alpha"):
-        alphaList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "~", "!", "@", "#", "$", "%", "^", "&", "*","(", ")", "?", "/", "{", ";", "|", "<", ">", "}", "-", "_", "+", "="]
+        alphaList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
+        "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "~", 
+        "!", "@", "#", "$", "%", "^", "&", "*","(", ")", "?", "/", "{", ";", "|", 
+        "<", ">", "}", "-", "_", "+", "="]
         pinnum1 = random.randint(0,9)
         pinnum2 = random.randint(0,9)
         pinnum3 = random.randint(0,9)
@@ -44,19 +47,17 @@ while(True):
         pinuser = int(pinuser)
 
     if (pinuser == 4):
-        pinnum1 = random.randint(0,9)
-        pinnum2 = random.randint(0,9)
-        pinnum3 = random.randint(0,9)
-        pinnum4 = random.randint(0,9)
-        print("Here is your generated 4-digit pin number: ",pinnum1,pinnum2,pinnum3,pinnum4)
+        pinnum = []
+        for i in range(0,4):
+            i = random.randint(0,9)
+            pinnum.append(i)
+        print("Here is your generated 4-digit pin number: ",pinnum[:])
         time.sleep(1)
     
     if (pinuser == 6):
-        pinnum1 = random.randint(0,9)
-        pinnum2 = random.randint(0,9)
-        pinnum3 = random.randint(0,9)
-        pinnum4 = random.randint(0,9)
-        pinnum5 = random.randint(0,9)
-        pinnum6 = random.randint(0,9)
-        print("Here is your generated 6-digit pin number: ",pinnum1,pinnum2,pinnum3,pinnum4,pinnum5,pinnum6)
+        pinnum = []
+        for i in range(0,6):
+            i = random.randint(0,9)
+            pinnum.append(i)
+        print("Here is your generated 4-digit pin number: ",pinnum)
         time.sleep(1)
