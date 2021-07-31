@@ -1,5 +1,7 @@
 import random
-wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", "Farmer", "Hello", "World", "code", "Hangman", "Google", "Apple", "toys", "stages", "python"]
+wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", 
+"Farmer", "Hello", "World", "code", "Hangman", "Google", "Apple", 
+"toys", "stages", "python"]
 print("Possible words:",wordlst)
 def hangman(word):
     wrong = 0

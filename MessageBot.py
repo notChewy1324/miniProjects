@@ -12,4 +12,3 @@ while(True):
     pyautogui.press("A")
     pyautogui.press("M")
     pyautogui.press("enter")
-    continue
