@@ -27,4 +27,4 @@ if (covidData != None):
             active = data["active"]
     
             time.sleep(covidTime)
-            print(f"{covidDate} \nTotal Cases Right Now: {totalcases} \n\n")
+            print(f"{covidDate} \nTotal Cases Right Now: {totalcases} \nCase Count Today: {todaycases} \nDeaths Today: {todaydeaths} \n\n")
