@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from email import message
 from socket import timeout
 import time
@@ -18,13 +18,13 @@ if (covidData != None):
     print(f"Refreshes every {covidTime} seconds.")
     
     while True:
-            covidDate = "COVID-19 Stats on {}".format(datetime.date.today())
-            message = "Total cases: {totalcases}\nToday cases: {todaycases}\nToday deaths: {todaydeaths}\nTotal active: {active}".format(
-                        totalcases = data['cases'],
-                        todaycases = data['todayCases'],
-                        todaydeaths = data['todayDeaths'],
-                        active = data["active"]), 
+        
+            covidDate = "COVID-19 Stats on {}".format(datetime.today().strftime('%Y-%m-%d-%H:%M:%S'))
             
-            
+            totalcases = data['cases'],
+            todaycases = data['todayCases'],
+            todaydeaths = data['todayDeaths'],
+            active = data["active"]
+    
             time.sleep(covidTime)
-            print(message)
+            print(f"{covidDate} \nTotal Cases Right Now: {totalcases} \n\n")
