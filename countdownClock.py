@@ -3,8 +3,8 @@ from turtle import position
 from playsound import playsound
 import time
 
-positionX = 800
-positionY = 600
+positionX = 300
+positionY = 200
 
 root = Tk()
 root.geometry(f'{positionX}x{positionY}')
