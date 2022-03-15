@@ -20,18 +20,18 @@ def clock():
     curr_time.config(text = clockTime)
     curr_time.after(1000,clock)
     
-curr_time =Label(root, font ='arial 15 bold', text = '', fg = 'gray25' ,bg ='papaya whip')
-curr_time.place(x = 190 , y = 70)
+curr_time =Label(root, font ='arial 15 bold', text = '', fg = 'gray25' ,bg ='white')
+curr_time.place(x = (positionX/2) , y = 70)
 clock()
 
 sec = StringVar()
-Entry(root, textvariable = sec, width = 2, font = 'arial 12').place(x=250, y=155)
+Entry(root, textvariable = sec, width = 2, font = 'arial 12').place(x=250, y=(positionY/2))
 sec.set('00')
 mins= StringVar()
-Entry(root, textvariable = mins, width =2, font = 'arial 12').place(x=225, y=155)
+Entry(root, textvariable = mins, width =2, font = 'arial 12').place(x=225, y=(positionY/2))
 mins.set('00')
 hrs= StringVar()
-Entry(root, textvariable = hrs, width =2, font = 'arial 12').place(x=200, y=155)
+Entry(root, textvariable = hrs, width =2, font = 'arial 12').place(x=200, y=(positionY/2))
 hrs.set('00')
         
 def countdown():
@@ -57,8 +57,8 @@ def countdown():
         times -= 1
         
 
-Label(root, font ='arial 15 bold', text = 'set the time',   bg ='papaya whip').place(x = 40 ,y = 150)
-Button(root, text='START', bd ='5', command = countdown, bg = 'antique white', font = 'arial 10 bold').place(x=150, y=210)
+Label(root, font ='arial 15 bold', text = 'set the time',   bg ='white').place(x = (positionX/2) ,y = 150)
+Button(root, text='START', bd ='5', command = countdown, bg = 'white', font = 'arial 10 bold').place(x=(positionX/2), y=210)
  
 root.mainloop()
 
