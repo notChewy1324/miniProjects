@@ -8,19 +8,18 @@ from scipy.ndimage import gaussian_filter
 import requests
 
 try:
-    train_data_file = requests.get("https://github.com/notChewy1324/miniProjects/blob/master/training_data.txt") #File with training data
+    train_data_file = requests.get("https://raw.githubusercontent.com/notChewy1324/miniProjects/d0627c5dd3581e161a4ce9ec0cedbf48969010e2/training_data.json") #File with training data
 except:
     print("Failed to create an connection. Check your internet.")
-
-with open(train_data_file.json()) as f:
-    train_text = f.read().lower()
     
-train_text = re.sub(r"\[.*\]|\{.*\}", "", train_text)
-train_text = re.sub(r'[^\w\s]', "", train_text)
+train_data_json = train_data_file.json()['line1']
+    
+train_data_json = re.sub(r"\[.*\]|\{.*\}", "", train_data_json)
+train_data_json = re.sub(r'[^\w\s]', "", train_data_json)
 
 n = 4
 
-training_data = list(pad_sequence(word_tokenize(train_text), n, 
+training_data = list(pad_sequence(word_tokenize(train_data_json), n, 
                                   pad_left=True, 
                                   left_pad_symbol="<s>"))
 
