@@ -12,7 +12,7 @@ try:
 except:
     print("Failed to create an connection. Check your internet.")
 
-with open(train_data_file) as f:
+with open(train_data_file.json()) as f:
     train_text = f.read().lower()
     
 train_text = re.sub(r"\[.*\]|\{.*\}", "", train_text)
