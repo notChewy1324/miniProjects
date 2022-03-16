@@ -12,7 +12,7 @@ try:
 except:
     print("Failed to create an connection. Check your internet.")
     
-train_data_json = train_data_file.json()['line1']
+train_data_json = [train_data_file.json()['line1']]
     
 train_data_json = re.sub(r"\[.*\]|\{.*\}", "", train_data_json)
 train_data_json = re.sub(r'[^\w\s]', "", train_data_json)
