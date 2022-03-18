@@ -1,9 +1,5 @@
 {
-    "TrainingINFO": {
-        "line1":"this is a training line from the json file",
-        "line2":"this is the second training line of the file",
-        "line3":"this is the third line"
-    },
+    "TrainingINFO": "this is a training line from the json file",
 
-    "TestingINFO": "this is a test line from the json file"
+    "TestingINFO": "this is a test line from the json file. I have made this for testing only. I like to code in python and java."
 }
