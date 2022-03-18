@@ -21,7 +21,7 @@ except:
     
 train_data_json = train_data_file.json()['TrainingINFO']
     
-train_data_json = re.sub(r"\[.*\]|\{.*\}", "", str(train_data_json)) #selected a line to fix TypeError
+train_data_json = re.sub(r"\[.*\]|\{.*\}", "", str(train_data_json))
 train_data_json = re.sub(r'[^\w\s]', "", train_data_json)
 
 n = 4
