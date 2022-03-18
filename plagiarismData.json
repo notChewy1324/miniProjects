@@ -5,7 +5,5 @@
         "line3":"this is the third line"
     },
 
-    "TestingINFO": [
-        "this is a test line from the json file"
-    ]
+    "TestingINFO": "this is a test line from the json file"
 }
