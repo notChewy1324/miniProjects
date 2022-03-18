@@ -1,4 +1,5 @@
 from asyncore import read
+from importlib.resources import as_file
 import re
 from urllib import request
 from nltk import ngrams, pad_sequence, everygrams
@@ -8,9 +9,10 @@ import numpy as np
 import plotly.graph_objects as go
 from scipy.ndimage import gaussian_filter
 import requests
+import json
 
 
-requestFile = "https://raw.githubusercontent.com/notChewy1324/miniProjects/65541e1b32abb557d8cec176cc838405080acc6a/plagiarismData.json"
+requestFile = "https://raw.githubusercontent.com/notChewy1324/miniProjects/master/plagiarismData.json"
 
 try:
     train_data_file = requests.get(f"{requestFile}") #File with training data
@@ -18,19 +20,15 @@ except:
     print("Failed to create an connection. Check your internet.")
     
 train_data_json = train_data_file.json()['TrainingINFO']
-
-print(f"DEBUG INFO: {train_data_json}")
     
-train_data_json = re.sub(r"\[.*\]|\{.*\}", "", train_data_json["line1"]) #selected a line to fix TypeError
+train_data_json = re.sub(r"\[.*\]|\{.*\}", "", str(train_data_json)) #selected a line to fix TypeError
 train_data_json = re.sub(r'[^\w\s]', "", train_data_json)
 
 n = 4
 
-training_data = list(pad_sequence(word_tokenize(train_data_json[0], train_data_json[1]), n, #Work on make the data_json file iterable
-                                  pad_left=True, 
-                                  left_pad_symbol="<s>"))
+training_data = str(train_data_json)
 
-ngrams = list(everygrams(pad_sequence, max_len=n))
+ngrams = list(training_data)
 print("Number of ngrams: ", len(ngrams))
 
 model = WittenBellInterpolated(n)
@@ -46,10 +44,24 @@ except:
     
 test_text = test_data_file.json()["TestingINFO"]
 
-test_text = re.sub(r'[^\w\s]', "", test_text)
+test_text = re.sub(r'[^\w\s]', "", str(test_text))
 
+testing_data = str(test_text)
 
-testing_data = list(pad_sequence(word_tokenize(test_text), n, 
-                                 pad_left=True,
-                                 left_pad_symbol="<s>"))
 print("Length of test data:", len(testing_data))
+
+
+# assign scores
+scores = [] 
+for i, item in enumerate(testing_data[n-1:]): 
+    s = model.score(item, testing_data[i:i+n-1]) 
+    scores.append(s) 
+    
+    scores_np = np.array(scores)
+    
+
+#Gui
+
+width = 8
+height = np.ceil(len(testing_data)/width)
+print(f"Width: {width}, Height: {height}")
