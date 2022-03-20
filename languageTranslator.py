@@ -5,7 +5,7 @@ translator = Translator()
 txt = input("Type anything... ")
 
 usrTXT = translator.translate(f"{txt}", dest='es') #change the 'dest' to change the output language
-print(f"{usrTXT.origin} ({usrTXT.src}) ---> {usrTXT.text} ({usrTXT.dest})")
+print(f"\n{usrTXT.origin} ({usrTXT.src}) ---> {usrTXT.text} ({usrTXT.dest})")
 
 
 sentences = [
@@ -17,4 +17,4 @@ sentences = [
 
 translations = translator.translate(sentences, dest="ar")
 for translation in translations: #translate many different lines at once
-    print(f"{translation.origin} ({translation.src}) --> {translation.text} ({translation.dest})")
+    print(f"\n{translation.origin} ({translation.src}) --> {translation.text} ({translation.dest})")
