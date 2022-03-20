@@ -28,11 +28,11 @@ n = 4
 
 training_data = str(train_data_json)
 
-ngrams = list(training_data)
-print("Number of ngrams: ", len(ngrams))
+#ngrams = list(training_data)
+#print("Number of ngrams: ", len(ngrams))
 
 model = WittenBellInterpolated(n)
-model.fit([ngrams], vocabulary_text=training_data)
+#model.fit([str(ngrams)], vocabulary_text=training_data)
 print(model.vocab)
 
 
