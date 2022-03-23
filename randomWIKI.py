@@ -1,7 +1,7 @@
 import requests
 import time
 
-wikiRefresh = 15 #controls refresh time in seconds
+wikiRefresh = 30 #controls refresh time in seconds
 
 def wikiInfo():
     
@@ -16,7 +16,7 @@ def wikiInfo():
     wikiDescription = data["description"]
     wikiBio = data["extract"]
     
-    print(f"\n\nWiki Title: {wikiTitle} \nWiki Description: {wikiDescription} \nWiki Bio: {wikiBio} \nWiki Page ID: {wikiID} \n\n")
+    print(f"\n\nWiki Page ID: {wikiID} \nWiki Description: {wikiDescription} \nWiki Bio: {wikiBio} \nWiki Title: {wikiTitle}\n\n")
     
 print(f"This program refreshes a new wiki page every {wikiRefresh} seconds.")
 time.sleep(3)
