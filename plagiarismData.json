@@ -1,5 +1,5 @@
 {
     "TrainingINFO": "this is a training line from the json file",
 
-    "TestingINFO": "this is a test line from the json file. I have made this for testing only. I like to code in python and java."
+    "TestingINFO": "this is a testing line from the json file"
 }
