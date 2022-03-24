@@ -1,7 +1,14 @@
 import random
-wordlst = ["cat", "dog", "goat", "cpu", "ram", "iphone", 
-"Farmer", "Hello", "World", "code", "Hangman", "Google", "Apple", 
-"toys", "stages", "python"]
+import requests
+
+wordlst = []
+
+try:
+    wordAPI = ""
+except:
+    print("")
+    
+
 print("Possible words:",wordlst)
 def hangman(word):
     wrong = 0
