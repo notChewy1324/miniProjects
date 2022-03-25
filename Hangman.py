@@ -2,12 +2,16 @@ import random
 import requests
 
 wordlst = []
+wordCnt = 10 # Number of words to add in the word list
 
-try:
-    wordAPI = ""
-except:
-    print("")
+def words():
+    try:
+        wordAPI = f"https://random-word-api.herokuapp.com/word?number={wordCnt}&swear=0"
+    except:
+        print("Failed to create an connection. Check your internet.")
+    wordlst.append(wordAPI)
     
+words()
 
 print("Possible words:",wordlst)
 def hangman(word):
