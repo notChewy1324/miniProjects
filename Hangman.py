@@ -1,14 +1,16 @@
 import random
 import requests
 
-wordlst = []
+wordlst = ["test1"]
 wordCnt = 10 # Number of words to add in the word list
 
 def words():
     try:
-        wordAPI = f"https://random-word-api.herokuapp.com/word?number={wordCnt}&swear=0"
+        wordAPI = requests.get(f"https://random-word-api.herokuapp.com/word?number={wordCnt}&swear=0")
     except:
         print("Failed to create an connection. Check your internet.")
+        
+    print(wordAPI)
     wordlst.append(wordAPI)
     
 words()
