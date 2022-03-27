@@ -2,7 +2,7 @@ import random
 import requests
 
 wordlst = ["test1"]
-wordCnt = 10 # Number of words to add in the word list
+wordCnt = 1 # Number of words to add in the word list
 
 def words():
     try:
@@ -10,8 +10,9 @@ def words():
     except:
         print("Failed to create an connection. Check your internet.")
         
-    print(wordAPI)
-    wordlst.append(wordAPI)
+    lstWords = wordAPI.json()
+    print(lstWords)
+    wordlst.append(lstWords)
     
 words()
 
