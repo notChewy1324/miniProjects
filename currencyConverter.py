@@ -15,3 +15,4 @@ class Currency_converter:
             
         amount = round(amount * self.rates[toCurrency], 2)
         print('{} {} = {} {}'.format(initialAmount, fromCurrency, toCurrency))
+        
