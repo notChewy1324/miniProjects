@@ -16,3 +16,12 @@ class Currency_converter:
         amount = round(amount * self.rates[toCurrency], 2)
         print('{} {} = {} {}'.format(initialAmount, fromCurrency, toCurrency))
         
+if __name__ == "__main__":
+  
+    url = str.__add__('http://data.fixer.io/api/latest?access_key=', YOUR_ACCESS_KEY)  
+    c = Currency_convertor(url)
+    from_country = input("From Country: ")
+    to_country = input("TO Country: ")
+    amount = int(input("Amount: "))
+  
+    c.convert(from_country, to_country, amount)
