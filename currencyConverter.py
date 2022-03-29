@@ -1,6 +1,6 @@
 import requests
 
-class Currency_converter:
+class Currency_convertor:
     
     rates = {}
     def __init__(self, url):
