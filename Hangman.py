@@ -8,7 +8,7 @@ def words():
     
     while (len(wordlst) < wordCnt):
         try:
-            wordAPI = requests.get("https://random-word-api.herokuapp.com/word?number=1&swear=0")
+            wordAPI = requests.get("https://random-word-api.herokuapp.com/word?number=1&swear=0") # [swear=0] Indicates no swear words to be used in the wordlst : [swear=1] will contain swear words
         except:
             print("Failed to create an connection. Check your internet.")
         
