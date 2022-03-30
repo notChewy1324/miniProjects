@@ -6,7 +6,7 @@ dis = pygame.display.set_mode((800,600))
 pygame.display.update()
 pygame.display.set_caption('Snake game by notchewy1324')
 
-white = (255, 255, 255)
+white = (0, 255, 0) #G
 black = (0, 0, 0)
 blue=(0,0,255)
 red=(255,0,0)
@@ -47,5 +47,3 @@ while not game_over:
 
 pygame.quit()
 quit()
-
-
